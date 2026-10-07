@@ -32,3 +32,56 @@ Project Skill Link menyediakan tiga pilar utama:
 ## 🛠️ Metodologi Pengembangan
 
 Proyek ini dikembangkan dengan menerapkan kombinasi **Project Based Learning (PjBL)**, **Agile**, dan **Scrum**:
+
+### Langkah-langkah Instalasi
+
+1.  **Clone Repository:**
+    ```bash
+    git clone [URL_REPOSITORY_ANDA]
+    cd nama-folder-proyek
+    ```
+
+2.  **Install Dependencies:**
+    Gunakan Composer untuk menginstal semua paket PHP yang dibutuhkan.
+    ```bash
+    composer install
+    ```
+
+3.  **Konfigurasi Environment:**
+    * Buat file `.env` dari contoh yang ada:
+        ```bash
+        cp .env.example .env
+        ```
+    * Buka file `.env` dan atur konfigurasi database Anda:
+        ```dotenv
+        APP_NAME="Jurnal PKL Digital"
+        APP_ENV=local
+        APP_KEY= # Akan diisi pada langkah berikutnya
+
+        DB_CONNECTION=mysql
+        DB_HOST=127.0.0.1
+        DB_PORT=3306
+        DB_DATABASE=[NAMA_DB_ANDA]
+        DB_USERNAME=[USER_DB_ANDA]
+        DB_PASSWORD=[PASS_DB_ANDA]
+        ```
+
+4.  **Generate Application Key:**
+    ```bash
+    php artisan key:generate
+    ```
+
+5.  **Migrasi Database:**
+    Jalankan migrasi untuk membuat semua tabel.
+    ```bash
+    php artisan migrate
+    ```
+    **(Opsional: Jika Anda memiliki Seeder untuk data awal seperti akun Admin, jalankan: `php artisan db:seed`)*
+
+6.  **Jalankan Server Lokal:**
+    ```bash
+    php artisan serve
+    ```
+    Aplikasi sekarang dapat diakses di `http://127.0.0.1:8000`.
+
+---
