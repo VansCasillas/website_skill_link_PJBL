@@ -38,7 +38,6 @@ Proyek ini dikembangkan dengan menerapkan kombinasi **Project Based Learning (Pj
 1.  **Clone Repository:**
     ```bash
     git clone [URL_REPOSITORY_ANDA]
-    cd nama-folder-proyek
     ```
 
 2.  **Install Dependencies:**
